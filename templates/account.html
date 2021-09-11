@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+{%  load static %}
+{% block title %} Account Detail | paycoinmama {% endblock title %}
+{% block links %}
+  <!--links-->
+  {% include "includes/links.html" %}
+<!--links end-->
+{% endblock links %}
+
+{% block content %}
+<!--sidebar-->
+  {% include "includes/sidebar.html" %}
+<!--sidebar end-->
+<div class="content">
+<!--sidebar-->
+  {% include "includes/navbar.html" %}
+<!--sidebar end-->
+<section class="section main-content">
+    <div class="content-tilte">
+      <div class="page-title dashboard">
+         <div class="crum">
+             <span><p style=" color: #0366fc;">PaycoinMaMa</p></span>&nbsp; / &nbsp; <span><p style="color: gray;">My Account</p></span>
+         </div>
+    </div>
+    </div>
+  </section>
+
+ <section class="section account-section">
+     <div class="container">
+         <div class="columns">
+             <div class="column is-6">
+                <div class="profile_card card ">
+                    <div class="card-body">
+                        <div class="media">
+                            <img class="mr-3 user__avatar mr-0 mr-sm-3" src="{% static '/images/avatar.png' %}" width="60" height="60" alt="">
+                            <div class="media-content"> 
+                                <h4 class="mb-2"> {{ user.username }} </h4>
+                                <p class="mb-1"> <span><i class="fa fa-phone mr-2 has-text-link"></i></span> 0000000000</p>
+                                <p class="mb-1"> <span><i class="fa fa-envelope mr-2 has-text-link"></i></span>
+                                    {{ user.email }}                                       </p>
+                            </div>
+                        </div>
+
+                        <ul class="card-profile__info">
+                            <li>
+                                <h5 class="mr-4">Address</h5>
+                                <span class="text-muted">{{ user.address }}</span>
+                            </li>
+                            <li class="mb-1">
+                                <h5 class="mr-4">Postal code</h5>
+                                <span>{{ user.postalcode }}</span>
+                            </li>
+                            <li class="mb-1">
+                                <h5 class="mr-4">Date Joined</h5>
+                                <span>{{ user.date_joined }}</span>
+                            </li>
+                            <li class="mb-1">
+                                <h5 class="mr-4">Date Of Birth</h5>
+                                <span>{{ user.date_of_birth }}</span>
+                            </li>
+                            <li>
+                                 
+                                <a href="{% url 'settings' %}" class="button is-primary ">
+                                    <span class="material-icons-outlined">
+                                        settings
+                                        </span>
+                                    settings
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+             </div>
+             <div class="column is-6">
+                <div class="acc_balance card ">
+                    <div class="card-header" style="box-shadow: none !important;">
+                        <h4 class="card-header-title">Wallet</h4>
+                    </div>
+                    <div class="card-content">
+                        <span>Available Balance(USD)</span>
+                        <h3>{{ user.balance }} USD</h3>
+
+                        <div class="d-flex justify-content-between my-4">
+                            <div>
+                                <p class="mb-1">Total Withdrawn</p>
+
+                                <h4>{{ user.withdraw_total }} USD</h4>
+                            </div>
+                            
+                        </div>
+
+                        <div class="btn-group mb-3">
+                            <a href="/sell-coin" class="button is-primary is-full-width">
+                                <span class="material-icons-outlined"> storefront </span> Sell</a>
+                            <a href="/buy-coin" class="button is-link is-full-width">
+                                <span class="material-icons-outlined"> sell </span>  Buy </a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+     </div>
+ </section>
+
+<!--footer-->
+    {% include "includes/footer.html" %}
+<!--footer end-->
+</div>
+
+
+{% endblock content %}

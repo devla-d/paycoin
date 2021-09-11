@@ -1,0 +1,86 @@
+{%  load static %}
+
+
+<div class="header">
+  <div class="header__left">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png"
+      alt=""
+    />
+  </div>
+
+  <div class="header__middle">
+    <!--a href="/" title="Home" class="header__option active">
+      <span class="material-icons"> home </span>
+    </a>
+ 
+    <a href="#" title="online users" class="header__option">
+      <span class="material-icons"> mark_chat_unread </span>
+    </a-->
+  </div>
+
+  <div class="header__right mt-2">
+    <ul class="crypto-btn is-align-content-center"> 
+      <li class="crypto">
+        <span>0</span>
+        <i class="cc BTC-alt"></i>
+      </li>        
+      <li class="usd">
+        <span>0 USD</span>
+      </li>                    
+    </ul>
+
+    <div class="dropdown is-right drop-desktop ">
+      <div class="dropdown-trigger header__info">
+        <img
+        class="user__avatar"
+        src="{{ user.profile_image.url }}"
+        alt="" aria-haspopup="true" aria-controls="dropdown-menu2"
+        />
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu2" role="menu" style="background-color: #fff;;">
+        <div class="dropdown-content">
+        <a href="{% url 'account' %}" class="dropdown-item">
+          <i class="material-icons-outlined"> account_circle </i> Account
+        </a>
+        <a href="{% url 'history' %}" class="dropdown-item">
+          <i class="material-icons-outlined"> history </i> History
+        </a>
+         
+        <a href="{% url 'logout' %}" class="dropdown-item logout">
+          <i class="material-icons-outlined"> logout </i> Logout
+        </a>
+        </div>
+    </div>
+    </div>
+      <div class="dropdown  is-right mobile-menu">
+        <div class="dropdown-trigger">
+            <i style="font-size: 30px; color: gray;" aria-haspopup="true" aria-controls="dropdown-menu3" class="material-icons-outlined">
+              drag_indicator
+            </i>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu3" role="menu" style="background-color: #fff;;">
+          <div class="dropdown-content">
+           
+              <a href="{% url 'dashboard' %}"  class="dropdown-item"><i class="material-icons-outlined"> dashboard </i> Dashboard</a>
+             
+             
+              <a href="{% url 'history' %}"  class="dropdown-item"><i class="material-icons-outlined"> history </i> History</a>
+            
+           
+              <a href="{% url 'sell_coin' %}"  class="dropdown-item"><i class="material-icons-outlined"> sell </i> Sell Coin</a>
+            
+           
+              <a href="{% url 'buy_coin' %}"  class="dropdown-item"><i class="material-icons-outlined"> storefront </i> Buy Coin</a>
+             
+              <a href="{% url 'account' %}"  class="dropdown-item"><i class="material-icons-outlined"> account_circle </i> Account</a>
+            
+              <a href="{% url 'logout' %}" class="dropdown-item logout">
+                <i class="material-icons-outlined"> logout </i> Logout
+              </a>
+             
+          </div>
+      </div>
+      </div>
+  </div>
+</div>

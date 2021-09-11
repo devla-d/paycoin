@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %} Verify payment | paycoinmama {% endblock title %}
+{% block links %}
+  <!--links-->
+  {% include "includes/links.html" %}
+<!--links end-->
+{% endblock links %}
+
+{% block content %}
+<!--sidebar-->
+  {% include "includes/sidebar.html" %}
+<!--sidebar end-->
+<div class="content">
+<!--sidebar-->
+  {% include "includes/navbar.html" %}
+<!--sidebar end-->
+
+ 
+
+<section class="section main-content">
+    <div class="content-tilte">
+      <div class="page-title dashboard">
+         <div class="crum">
+             <span><p style=" color: #0366fc;">PaycoinMaMa</p></span>&nbsp; / &nbsp; <span><p style="color: gray;">Verify Payment</p></span>
+         </div>
+    </div>
+    </div>
+  </section>
+
+ <section class="section verify-payment-section">
+ <div class="container">
+    <div class="mytable-responsive">
+        <p>Pay into the payment address before confirming payment, also upload proof of payment</p>
+        
+        <table class="mytable">
+            <tbody>
+                <tr>
+                    <td><span class="has-text-primary">You are getting </span></td>
+                    <td><span class="has-text-primary">{{ buycoin.amount_in_coin }} {{ buycoin.coin }}</span></td>
+                </tr>
+                <tr>
+                    <td>Payment Method</td>
+                    <td>Bank Transfer</td>
+                </tr>
+                
+                <tr>
+                    <td>Fee</td>
+                    <td>$5 USD</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>${{ buycoin.amount_in_usd }} USD</td>
+                </tr>
+               
+                <tr>
+                    <td> Sub Total</td>
+                    <td> ${{ buycoin.total }} USD</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   <div class="box">
+    <form method="POST" action="/verify-payment/" name="myform" enctype="multipart/form-data">
+        <div class="form-group mb-3">
+            <div class="field">
+                <div class="control">
+                    {% csrf_token %} 
+
+                    {{ form|crispy }}
+                    <input type="hidden" name="payuri" value="{{ buycoin.uri }}">
+                </div>
+            </div>
+            
+        </div>
+
+        <button type="submit"  class="button is-success is-fullwidth">Verify Your Payment</button>
+   </form>
+   </div>
+ </div>
+ </section>
+
+
+<div class="mt-5">
+    <!--footer-->
+       {% include "includes/footer.html" %}
+    <!--footer end-->
+</div>
+ 
+ 
+
+{% endblock content %}

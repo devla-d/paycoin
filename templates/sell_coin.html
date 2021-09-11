@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %} Sell your coin | paycoinmama {% endblock title %}
+{% block links %}
+  <!--links-->
+  {% include "includes/links.html" %}
+<!--links end-->
+{% endblock links %}
+
+{% block content %}
+<!--sidebar-->
+  {% include "includes/sidebar.html" %}
+<!--sidebar end-->
+<div class="content">
+<!--sidebar-->
+  {% include "includes/navbar.html" %}
+<!--sidebar end-->
+<section class="section main-content">
+    <div class="content-tilte">
+      <div class="page-title dashboard">
+         <div class="crum">
+             <span><p style=" color: #0366fc;">PaycoinMaMa</p></span>&nbsp; / &nbsp; <span><p style="color: gray;">Sell Your Coin</p></span>
+         </div>
+    </div>
+    </div>
+  </section>
+
+ <section class="section sell-coin-section">
+     <div class="container">
+          
+         <div class="sell-coin-form-container">
+             <form action="/sell-coin/" method="post">
+              {% csrf_token %}
+              {% if messages %}
+              {% for msg in messages %}
+              <div class="">          
+                <h5 class="notification is-primary">{{msg }}</h5>
+               </div>
+               {% endfor %}
+               {% endif %}
+                 <div class="form-g">
+                        <div class="">
+                          <div class="columns">
+
+                            <div class="column is-6">                          
+                                <div class="field">
+                                <label class="label">Coin</label>
+                                <div class="control has-icons-left">
+                                  <span class="select is-medium">
+                                    <select style="background: #F2F6FE;">
+                                        <option data-display="Select Coin" value="">Coin
+                                        </option>
+                                        <option value="Bitcoin">BTC</option>
+                                          
+                                        <option value="Etheruem">ETH</option>
+                                        <option value="ripple">XRP</option>
+                                        <option value="dogecoin">DOGE</option>
+                                    </select>
+                                  </span>
+                                  <span class="icon is-small is-left">
+                                    <i class="fas fa-coins" style=" color: #1652F0;"></i>
+                                  </span>
+                                </div>
+                                </div> 
+                            </div>
+
+                            <div class="column is-6">
+                              <div class="field">
+                                <label class="label">Payment details </label>
+                                <div class="control has-icons-left">
+                                  <input class="input is-medium" type="text" placeholder=" Put your address to recieve your fund">
+                                  <span class="icon is-small is-left">
+                                    <i class="fas fa-money-check" style=" color: #1652F0;"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="field">
+                            <label class="label">Amount in coin</label>
+                            <div class="control has-icons-left has-icons-right">
+                              <input class="input is-medium " type="text" placeholder="amount" >
+                              <span class="icon is-small is-left">
+                                <i class="fas fa-money-bill" style=" color: #1652F0;"></i>
+                              </span>
+                            </div>
+                             
+                          </div>
+                          <div class="field mt-6">
+                            <div class="control">
+                                <button class="button  is-fullwidth  is-primary">Sell Now</button>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+             </form>
+         </div>
+     </div>
+ </section>
+
+<!--footer-->
+    {% include "includes/footer.html" %}
+<!--footer end-->
+</div>
+
+
+{% endblock content %}

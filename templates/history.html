@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %} Transaction History | paycoinmama {% endblock title %}
+{% block links %}
+  <!--links-->
+  {% include "includes/links.html" %}
+<!--links end-->
+{% endblock links %}
+
+{% block content %}
+<!--sidebar-->
+  {% include "includes/sidebar.html" %}
+<!--sidebar end-->
+<div class="content">
+<!--sidebar-->
+  {% include "includes/navbar.html" %}
+<!--sidebar end-->
+
+
+
+<section class="transction-history">
+    <div class="container">
+        <div class=" mt-5">
+            <div class="">
+                <div class="headerbox">
+                    <h1 class="cardheader">Transaction History</h1>
+                </div>
+                <div class="mycard-content pt-3">
+                    {% if transactions %}
+                    <div class="transaction-table">
+                        <div class="mytable-responsive">
+                           
+                           <table class="mytable mytable-responsive-sm">
+                            <tbody>
+                                {% for transac in transactions %}
+                                <tr class="table-widget">
+                                   <td>
+                                       <span class="tag  is-primary">{{transac.transac_type}}</span>
+                                    </td>
+                                    <td>
+                                        {% if transac.coin == 'BTC' %}
+                                           <i class="cc BTC" style="color: #FE9431;"></i> {{transac.coin}}
+                                        {% elif transac.coin == 'ETH' %}
+                                           <i class="cc ETH mr-3 "  style="color:rgb(31, 51, 51);"></i> {{transac.coin}}
+                                        {% elif transac.coin == 'DOGE' %}
+                                          <i class="cc DOGE mr-3" style="color: gold;"></i> {{transac.coin}}
+                                        {% else  %}
+                                          <i class="cc XRP mr-3" style="color: #072163;"></i> {{transac.coin}}
+                                        {% endif %}
+                                        
+                                    </td>
+                                    <td>
+                                        Processing
+                                    </td>
+                                    <td class="has-text-danger">{{ transac.amount_in_coin }} {{transac.coin}}</td>
+                                    <td>{{ transac.amount_in_usd}} USD</td>
+                                </tr>
+                                {%  endfor %}
+                            </tbody>
+                          </table> 
+
+                        </div>
+                      </div>
+                    {% else %}
+                      <div class="box " style="padding: 20px; margin-top: 100px; margin-bottom: 150px;">
+                          <h3>No Recent Transaction</h3>
+                      </div>
+                    {% endif %}
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!--footer-->
+    {% include "includes/footer.html" %}
+<!--footer end-->
+</div>
+
+
+{% endblock content %}

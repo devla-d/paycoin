@@ -1,0 +1,183 @@
+{% extends "layout.html" %}
+{%  load static %}
+{% block title %} Account settings | paycoinmama {% endblock title %}
+{% block links %}
+  <!--links-->
+  {% include "includes/links.html" %}
+<!--links end-->
+{% endblock links %}
+
+{% block content %}
+<!--sidebar-->
+  {% include "includes/sidebar.html" %}
+<!--sidebar end-->
+<div class="content">
+<!--sidebar-->
+  {% include "includes/navbar.html" %}
+<!--sidebar end-->
+<section class="section main-content">
+    <div class="content-tilte">
+      <div class="page-title dashboard">
+         <div class="crum">
+             <span><p style=" color: #0366fc;">PaycoinMaMa</p></span>&nbsp; / &nbsp; <span><p style="color: gray;">My Account Settings</p></span>
+         </div>
+    </div>
+    </div>
+  </section>
+
+
+
+<sections class="section account-settings">
+    <div class="container">
+        <div class="has-text-center text-center">
+            {% if messages %}
+            {% for message in messages %}
+                <div class="">          
+                    <h5 class="notification is-primary">{{ message}}</h5>
+                </div>
+
+            {% endfor %}
+            {% endif %}
+             
+        </div>
+        <div class="columns">
+            <div class="column is-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-header-title">User Profile</h4>
+                    </div>
+                    <div class="card-content">
+                        <form action="{% url 'profile_info' %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="field">
+                                    <label class="label label mr-sm-2">Your Name</label>
+                                    <div class="control has-icon-left">
+                                        <input type="text" required="required" name="fullname" class="input" value="{{ user.fullname }}">
+                                    </div>
+                                   
+                                </div>
+                                <div class="field">
+                                    <div class="media align-items-center mb-3">
+                                        <img class="mr-3 user__avatar mr-0 mr-sm-3" src="{{ user.profile_image.url }}" width="55" height="55" alt="">
+                                        <div class="media-content">
+                                            <h4 class="mb-0">{{ user.username }}</h4>
+                                            <p class="mb-0">Max file size is 20mb
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class = "file">
+                                        <label class = "file-label">
+                                           <input class = "input" type = "file" name = "profile_image">
+                                            
+                                        </label>
+                                     </div>
+                                </div>
+
+
+                                  <div class="field">
+                                    <label class="label label mr-sm-2">Email</label>
+                                    <input type="text" class="input" placeholder="**********" value="{{ user.email }}" readonly="readonly">
+                                    <p class="mt-2 mb-0">Contact admin to change email
+                                    </p>
+                                </div>
+                                <div class="col-12">
+                                    <button class="button is-primary waves-effect" name="save_name">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-header-title">Change Password</h4>
+                         
+                    </div>
+                    <div class="card-content">
+                        <form action="{% url 'user_paswordchange' %}" method="POST">
+                            <div class="form-row">{% csrf_token  %}
+                                <div class="field">
+                                    <label class="label mr-sm-2">Old Password</label>
+                                    <div class="control">
+                                        <input type="password" class="input" placeholder="********" name="oldpass">
+                                    </div>
+                                    
+                                </div>
+                                <div class="field">
+                                    <label class="label mr-sm-2">New Password</label>
+                                    <div class="control">
+                                        <input type="password" class="input" placeholder="**********" name="password1" min="8">
+                                    </div>
+                                    
+                                   
+                                </div>
+
+                                  <div class="field">
+                                    <label class="label mr-sm-2">Confirm Password</label>
+                                    <div class="control">
+                                        <input type="password" class="input" placeholder="**********" name="password2" min="8">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button class="button is-primary waves-effect" name="reset">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="is-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-header-title">Other(s) Information</h4>
+                </div>
+                <div class="card-content">
+                    <form method="POST" name="myform" class="personal_validate" action="{% url 'user_profile_info' %}">
+                        <div class="form-row">{% csrf_token  %}
+                           
+                            <div class="field">
+                                <label class="mr-sm-2">Date of birth</label>
+                                <div class="control">
+                                    <input type="date" class="input" placeholder="10-10-2019" id="datepicker" autocomplete="off" value="{{ user.date_of_birth }}" name="date_of_birth">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="mr-sm-2"> Address</label>
+                                <div class="control">
+                                    <input type="text" class="input" placeholder="56, Old Street, Brooklyn" name="address" value="{{ user.address }}">
+                                </div>
+                            </div>
+                           
+                            <div class="field">
+                                <label class="mr-sm-2">Postal Code</label>
+                                <div class="control">
+                                    <input type="text" value="{{ user.postalcode }}" class="input" placeholder="25481" name="postalcode">
+                                </div>
+                            </div>
+                           
+
+                            <div class="form-group col-12">
+                                <button class="button is-primary pl-5 pr-5" name="update_user">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</sections>
+
+
+
+
+<!--footer-->
+    {% include "includes/footer.html" %}
+<!--footer end-->
+</div>
+
+
+{% endblock content %}

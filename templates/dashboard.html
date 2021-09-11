@@ -1,0 +1,158 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %} Dashboard | paycoinmama {% endblock title %}
+{% block links %}
+  <!--links-->
+  {% include "includes/links.html" %}
+<!--links end-->
+{% endblock links %}
+
+{% block content %}
+<!--sidebar-->
+  {% include "includes/sidebar.html" %}
+<!--sidebar end-->
+<div class="content">
+<!--sidebar-->
+  {% include "includes/navbar.html" %}
+<!--sidebar end-->
+
+  <section class="section main-content">
+    <div class="content-tilte">
+      <div class="page-title dashboard">
+        <div class="page-title-content">
+          <p>Welcome Back,
+              <span style="color: gray;"> Goodness Sammy </span>
+          </p>
+      </div>
+    </div>
+    </div>
+    <div class="content-body">
+      <div class="container">
+          <div class="csss">
+              <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,74,5994,2,7964,2147,3077,3012,9939,3939,1958,6918,4172" currency="USD" theme="light" transparent="false" show-symbol-logo="true"><div class="coin-marquee-wrapper coin-marquee-wrapper--light ">
+          </div>
+      </div>
+    </div>
+  </section>
+  <section class="graph-section">
+     <div class="container">
+          <div class="columns" >
+            <div class="column is-4">
+              <ul>
+                  <li class="media">
+                    <i class="cc BTC mr-3" style="color: #FE9431;"></i>
+                    <div class="media-content">
+                        <h5 class="m-0">Bitcoin</h5>
+                    </div>
+                    <div class="text-right">
+                        <h5>0.00000000 BTC</h5>
+                        <span>0 USD</span>
+                    </div>
+                  </li>
+                  <li class="media">
+                    <i class="cc ETH mr-3 "  style="color:rgb(31, 51, 51);"></i>
+                    <div class="media-content">
+                        <h5 class="m-0">Etheruem</h5>
+                    </div>
+                    <div class="text-right">
+                        <h5>   0.00000000 ETH</h5>
+                        <span>0 USD</span>
+                    </div>
+                  </li>
+                  <li class="media">
+                    <i class="cc DOGE mr-3" style="color: gold;"></i>
+                    <div class="media-content">
+                        <h5 class="m-0">Dogecoin</h5>
+                    </div>
+                    <div class="text-right">
+                        <h5>0.00000000 DOGE</h5>
+                        <span>0 USD</span>
+                    </div>
+                  </li>
+                  <li class="media">
+                    <i class="cc XRP mr-3" style="color: #072163;"></i>   
+                    <div class="media-content">
+                        <h5 class="m-0">Ripple</h5>
+                    </div>
+                    <div class="text-right">
+                        <h5>0.00000000 XRP</h5>
+                        <span>0 USD</span>
+                    </div>
+                  </li>
+              </ul>
+            </div>
+            <div class="column is-8">
+              <div><iframe src="https://widget.coinlib.io/widget?type=chart&amp;theme=light&amp;coin_id=859&amp;pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div>
+            </div>
+          </div>
+     </div>
+  </section>
+  <section class="wallet-section">
+    <div class="container">
+      <div class=" mycard">
+        <div class="mycard-header border-0 py-0">
+            <h4 class="card-title">Your Address</h4>
+            <!--button class="button is-info" data-toggle="modal" data-target="#myModal">Add New Wallet</button-->
+        </div>
+        <div class="mycard-content pt-3">
+            <div class="transaction-table">
+                <div class="mytable-responsive">
+                  <table class="mytable mytable-responsive-sm">
+                    <tbody> 
+                        <tr class="table-widget">
+                          <td></td>
+                          <td>
+                            <i class="cc BTC" style="color: #FE9431;"></i>  Bitcoin
+                          </td>
+                          <td>
+                              bc1qfd9aga3lg6a50mrq89j6kuceunv9mxr3qry8eu                                                    </td>
+                          <td class="has-text-success">-0.00000000 BTC</td>
+                          <td>-0 USD</td>
+                        </tr>
+                        <tr class="table-widget">
+                          <td></td>
+                          <td>
+                            <i class="cc ETH mr-3 "  style="color:rgb(31, 51, 51);"></i>  Etheruem
+                          </td>
+                          <td>
+                              bc1qfd9aga3lg6a50mrq89j6kuceunv9mxr3qry8eu                                                    </td>
+                          <td class="has-text-success">-0.00000000 ETH</td>
+                          <td>-0 USD</td>
+                        </tr>
+                        <tr class="table-widget">
+                          <td></td>
+                          <td>
+                            <i class="cc DOGE mr-3" style="color: gold;"></i> Dogecoin
+                          </td>
+                          <td>
+                              bc1qfd9aga3lg6a50mrq89j6kuceunv9mxr3qry8eu                                                    </td>
+                          <td class="has-text-success">-0.00000000 DOGE</td>
+                          <td>-0 USD</td>
+                        </tr>
+                        <tr class="table-widget">
+                          <td></td>
+                          <td>
+                            <i class="cc XRP mr-3" style="color: #072163;"></i> Ripple
+                          </td>
+                          <td>
+                              bc1qfd9aga3lg6a50mrq89j6kuceunv9mxr3qry8eu                                                    </td>
+                          <td class="has-text-success">-0.00000000 XRP</td>
+                          <td>-0 USD</td>
+                        </tr>
+                    </tbody>
+                  </table> 
+                </div>
+              </div>
+        </div>
+         
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+     {% include "includes/footer.html" %}
+   <!--footer end-->
+</div>
+
+
+{% endblock content %}

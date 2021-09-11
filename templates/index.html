@@ -1,0 +1,924 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Mirrored from paycoinmama.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Aug 2021 14:59:35 GMT -->
+    <!-- Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Home Page --- paycoinmama, Smart way of buying Digital Assets </title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'pages/images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'pages/vendor/nice-select/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/vendor/owl-carousel/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/vendor/owl-carousel/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/vendor/waves/waves.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/vendor/waves/waves.min.css' %}">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/vendor/toastr/toastr.min.css' %}">
+    <script src="{% static 'pages/js/jquery.min.js' %}"></script>
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="navigation">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <a class="navbar-brand" href="/"><img src="{% static 'pages/images/logo.png' %}"
+                                        alt=""></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link" href="/" data-toggle="dropdown">Home
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/price">Price</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/wallet">Wallet</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Company
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="/about">About us</a>
+                                                <a class="dropdown-item" href="/team">Team</a>
+                                                <a class="dropdown-item" href="/career">Career</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Support
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="/contact">Contact us</a>
+                                                <a class="dropdown-item" href="/helpdesk">Help Desk</a>
+                                                <a class="dropdown-item" href="/faq">FAQ</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/register">Signup</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="signin-btn">
+                                    <a class="btn btn-primary" href="/login">Sign in</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-12">
+                        <div class="intro-content">
+                            <h1>Trade with <strong class="text-primary">paycoinmama</strong>. <br> Buy and sell
+                                cryptocurrency
+                            </h1>
+                            <p>Fast and secure way to purchase or exchange 150+ cryptocurrencies</p>
+                        </div>
+
+                        <div class="intro-btn">
+                            <a href="/register" class="btn btn-primary">Get Started</a>
+                            <a href="/price" class="btn btn-outline-primary">Browse Now</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-12">
+                        <div class="intro-form-exchange">
+                            <form method="post" name="myform" class="currency_validate">
+                                <!-- Crypto Converter  Widget -->
+                                <crypto-converter-widget shadow symbol live background-color="ffff"
+                                    border-radius="0.87rem" fiat="united-states-dollar" crypto="bitcoin" amount="1"
+                                    decimal-places="2"><a href="https://cr.today/" target="_blank"
+                                        rel="noopener">Converter Widget</a></crypto-converter-widget>
+                                <script async
+                                    src="{% static 'pages/cdn.jsdelivr.net/gh/dejurin/crypto-converter-widget/dist/latest.min.js' %}"></script>
+                                <!-- /Crypto Converter  Widget -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="price-grid section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="card">
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a
+                                        href="https://www.tradingview.com/symbols/BTCUSD/?exchange=BITBAY"
+                                        rel="noopener" target="_blank"><span class="blue-text">BTCUSD Rates</span></a>
+                                    by TradingView</div>
+                                <script type="text/javascript"
+                                    src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                    async>
+                                        {
+                                            "symbol": "BITBAY:BTCUSD",
+                                                "width": 350,
+                                                    "height": 220,
+                                                        "locale": "en",
+                                                            "dateRange": "12M",
+                                                                "colorTheme": "light",
+                                                                    "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                        "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                            "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                                "isTransparent": false,
+                                                                                    "autosize": false,
+                                                                                        "largeChartUrl": ""
+                                        }
+                                    </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <div class="tradingview-widget-copyright"><a
+                                    href="https://www.tradingview.com/symbols/BTCUSD/?exchange=BITBAY" rel="noopener"
+                                    target="_blank"><span class="blue-text">BTCUSD Rates</span></a> by TradingView</div>
+                            <script type="text/javascript"
+                                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                async>
+                                    {
+                                        "symbol": "BITBAY:ETHUSD",
+                                            "width": 350,
+                                                "height": 220,
+                                                    "locale": "en",
+                                                        "dateRange": "12M",
+                                                            "colorTheme": "light",
+                                                                "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                    "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                        "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                            "isTransparent": false,
+                                                                                "autosize": false,
+                                                                                    "largeChartUrl": ""
+                                    }
+                                </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <div class="tradingview-widget-copyright"><a
+                                    href="https://www.tradingview.com/symbols/LTCUSD/?exchange=BITBAY" rel="noopener"
+                                    target="_blank"><span class="blue-text">LTCUSD Rates</span></a> by TradingView</div>
+                            <script type="text/javascript"
+                                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                async>
+                                    {
+                                        "symbol": "BITBAY:LTCUSD",
+                                            "width": 350,
+                                                "height": 220,
+                                                    "locale": "en",
+                                                        "dateRange": "12M",
+                                                            "colorTheme": "light",
+                                                                "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                    "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                        "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                            "isTransparent": false,
+                                                                                "autosize": false,
+                                                                                    "largeChartUrl": ""
+                                    }
+                                </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <div class="tradingview-widget-copyright"><a
+                                    href="https://www.tradingview.com/symbols/XRPUSD/?exchange=BITBAY" rel="noopener"
+                                    target="_blank"><span class="blue-text">XRPUSD Rates</span></a> by TradingView</div>
+                            <script type="text/javascript"
+                                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                async>
+                                    {
+                                        "symbol": "BITBAY:XRPUSD",
+                                            "width": 350,
+                                                "height": 220,
+                                                    "locale": "en",
+                                                        "dateRange": "12M",
+                                                            "colorTheme": "light",
+                                                                "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                    "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                        "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                            "isTransparent": false,
+                                                                                "autosize": false,
+                                                                                    "largeChartUrl": ""
+                                    }
+                                </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <div class="tradingview-widget-copyright"><a
+                                    href="https://www.tradingview.com/symbols/EURUSD/?exchange=FX" rel="noopener"
+                                    target="_blank"><span class="blue-text">EURUSD Rates</span></a> by TradingView</div>
+                            <script type="text/javascript"
+                                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                async>
+                                    {
+                                        "symbol": "FX:EURUSD",
+                                            "width": 350,
+                                                "height": 220,
+                                                    "locale": "en",
+                                                        "dateRange": "12M",
+                                                            "colorTheme": "light",
+                                                                "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                    "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                        "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                            "isTransparent": false,
+                                                                                "autosize": false,
+                                                                                    "largeChartUrl": ""
+                                    }
+                                </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <div class="tradingview-widget-copyright"><a
+                                    href="https://www.tradingview.com/symbols/TRXUSD/?exchange=BITBAY" rel="noopener"
+                                    target="_blank"><span class="blue-text">TRXUSD Rates</span></a> by TradingView</div>
+                            <script type="text/javascript"
+                                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                async>
+                                    {
+                                        "symbol": "BITBAY:TRXUSD",
+                                            "width": 350,
+                                                "height": 220,
+                                                    "locale": "en",
+                                                        "dateRange": "12M",
+                                                            "colorTheme": "light",
+                                                                "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                    "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                        "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                            "isTransparent": false,
+                                                                                "autosize": false,
+                                                                                    "largeChartUrl": ""
+                                    }
+                                </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="getstart section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="section-title">
+                            <h2>Get started in a few minutes</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="getstart-content">
+                            <span><i class="la la-user-plus"></i></span>
+                            <h3>Create an account</h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="getstart-content">
+                            <span><i class="la la-bank"></i></span>
+                            <h3>Link your bank account</h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="getstart-content">
+                            <span><i class="la la-exchange"></i></span>
+                            <h3>Start buying & selling</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="portfolio section-padding" data-scroll-index="2">
+            <div class="container">
+                <div class="row py-lg-5 justify-content-center">
+                    <div class="col-xl-7">
+                        <div class="section-title text-center">
+                            <h2>Create your cryptocurrency portfolio today</h2>
+                            <p>paycoinmama has a variety of features that make it the best place to start trading</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-7 col-lg-6">
+                        <div class="portfolio_list">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="media">
+                                        <span class="port-icon"> <i class="la la-bar-chart"></i></span>
+                                        <div class="media-body">
+                                            <h4>Manage your portfolio</h4>
+                                            <p>Buy and sell popular digital currencies, keep track of them in the one
+                                                place.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="media">
+                                        <span class="port-icon"> <i class="la la-calendar-check-o"></i></span>
+                                        <div class="media-body">
+                                            <h4>Recurring buys</h4>
+                                            <p>Invest in cryptocurrency slowly over time by scheduling buys daily,
+                                                weekly,
+                                                or monthly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="media">
+                                        <span class="port-icon"> <i class="la la-lock"></i></span>
+                                        <div class="media-body">
+                                            <h4>Vault protection</h4>
+                                            <p>For added security, store your funds in a vault with time delayed
+                                                withdrawals.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="media">
+                                        <span class="port-icon"> <i class="la la-mobile"></i></span>
+                                        <div class="media-body">
+                                            <h4>Mobile apps</h4>
+                                            <p>Stay on top of the markets with the paycoinmama app for <a
+                                                    href="#">Android</a>
+                                                or
+                                                <a href="#">iOS</a>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="portfolio_img">
+                            <img src="{% static 'pages/images/portfolio.png' %}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trade-app section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-title text-center">
+                            <h2>Trade. Anywhere</h2>
+                            <p> All of our products are ready to go, easy to use and offer great value to any kind of
+                                business
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="card trade-app-content">
+                            <div class="card-body">
+                                <span><i class="la la-mobile"></i></span>
+                                <h4 class="card-title">Mobile</h4>
+                                <p>All the power of paycoinmama's cryptocurrency exchange, in the palm of your hand.
+                                    Download
+                                    the
+                                    paycoinmama mobile crypto trading app today</p>
+
+                                <a href="#"> Know More <i class="la la-arrow-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="card trade-app-content">
+                            <div class="card-body">
+                                <span><i class="la la-desktop"></i></span>
+                                <h4 class="card-title">Desktop</h4>
+                                <p>Powerful crypto trading platform for those who mean business. The paycoinmama crypto
+                                    trading
+                                    experience, tailor-made for your Windows or MacOS device.</p>
+
+                                <a href="#"> Know More <i class="la la-arrow-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="card trade-app-content">
+                            <div class="card-body">
+                                <span><i class="la la-connectdevelop"></i></span>
+                                <h4 class="card-title">API</h4>
+                                <p>The paycoinmama API is designed to provide an easy and efficient way to integrate
+                                    your
+                                    trading
+                                    application into our platform.</p>
+
+                                <a href="#"> Know More <i class="la la-arrow-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-xl-12">
+                        <div class="trusted-business py-5 text-center">
+                            <h3>Trusted by Our <strong>Partners & Investors</strong></h3>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                <div class="trusted-logo">
+                                    <a href="#"><img class="img-fluid" src="{% static 'pages/images/brand/1.webp' %}"
+                                            alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="trusted-logo">
+                                    <a href="#"><img class="img-fluid" src="{% static 'pages/images/brand/2.webp' %}"
+                                            alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="trusted-logo">
+                                    <a href="#"><img class="img-fluid" src="{% static 'pages/images/brand/3.webp' %}"
+                                            alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="trusted-logo">
+                                    <a href="#"><img class="img-fluid" src="{% static 'pages/images/brand/4.webp' %}"
+                                            alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="trusted-logo">
+                                    <a href="#"><img class="img-fluid" src="{% static 'pages/images/brand/5.webp' %}"
+                                            alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="testimonial section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-title">
+                            <h2>What our customer says</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="testimonial-content">
+                            <div class="testimonial1 owl-carousel owl-theme">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="customer-img">
+                                            <img class="img-fluid" src="{% static 'pages/images/testimonial/1.jpg' %}"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="customer-review">
+                                            <img class="img-fluid" src="{% static 'pages/images/brand/2.webp' %}"
+                                                alt="">
+                                            <p>Your Online Hosted Bitcoin Wallet.
+                                                No more thefts. We keep your Bitcoin safe and secure. If there is any
+                                                thing called reliance, it should be paycoinmama </p>
+                                            <div class="customer-info">
+                                                <h6>Mr John Manuel</h6>
+                                                <p>CEO, Wanderer Company</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="customer-img">
+                                            <img class="img-fluid" src="{% static 'pages/images/testimonial/2.jpg' %}"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="customer-review">
+                                            <img class="img-fluid" src="{% static 'pages/images/brand/3.webp' %}"
+                                                alt="">
+                                            <p>Your Online Hosted Bitcoin Wallet.
+                                                No more thefts. We keep your Bitcoin safe and secure. If there is any
+                                                thing called reliance, it should be paycoinmama </p>
+                                            <div class="customer-info">
+                                                <h6>Mr Abraham Lilcoin</h6>
+                                                <p>CEO, Baxel Company</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="promo section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="section-title text-center">
+                            <h2>The most trusted cryptocurrency platform</h2>
+                            <p> Here are a few reasons why you should choose paycoinmama
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center py-5">
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="promo-content">
+                            <div class="promo-content-img">
+                                <img class="img-fluid" src="{% static 'pages/images/svg/protect.svg' %}" alt="">
+                            </div>
+                            <h3>Secure storage </h3>
+                            <p>We store the vast majority of the digital assets in secure offline storage.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="promo-content">
+                            <div class="promo-content-img">
+                                <img class="img-fluid" src="{% static 'pages/images/svg/cyber.svg' %}" alt="">
+                            </div>
+                            <h3>Protected by insurance</h3>
+                            <p>Cryptocurrency stored on our servers is covered by our insurance policy.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="promo-content">
+                            <div class="promo-content-img">
+                                <img class="img-fluid" src="{% static 'pages/images/svg/finance.svg' %}" alt="">
+                            </div>
+                            <h3>Industry best practices</h3>
+                            <p>paycoinmama supports a variety of the most popular digital currencies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="appss section-padding">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-7 col-lg-6 col-md-6">
+                        <div class="appss-content">
+                            <h2>The secure app to store crypto yourself</h2>
+                            <ul>
+                                <li><i class="la la-check"></i> All your digital assets in one place</li>
+                                <li><i class="la la-check"></i> Use Decentralized Apps</li>
+                                <li><i class="la la-check"></i> Pay friends, not addresses</li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="#" class="btn btn-primary my-1 waves-effect">
+                                    <img src="{% static 'pages/images/android.svg' %}" alt="">
+                                </a>
+                                <a href="#" class="btn btn-primary my-1 waves-effect">
+                                    <img src="{% static 'pages/images/apple.svg' %}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-md-6">
+                        <div class="appss-img">
+                            <img class="img-fluid" src="{% static 'pages/images/app.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-title text-center">
+                            <h2>Blog</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="blog-grid">
+                            <div class="card">
+                                <img class="img-fluid" src="{% static 'pages/images/blog/1.jpg' %}" alt="">
+                                <div class="card-body">
+                                    <a href="blog-single.html">
+                                        <h4 class="card-title">Why does Litecoin need MimbleWimble?</h4>
+                                    </a>
+                                    <p class="card-text">Cras chinwag brown bread Eaton cracking goal so I said a load
+                                        of
+                                        old tosh baking cakes.!</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="meta-info">
+                                        <a href="#" class="author"><img src="{% static 'pages/images/avatar/5.jpg' %}"
+                                                alt=""> Admin</a>
+                                        <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="blog-grid">
+                            <div class="card">
+                                <img class="img-fluid" src="{% static 'pages/images/blog/2.jpg' %}" alt="">
+                                <div class="card-body">
+                                    <a href="blog-single.html">
+                                        <h4 class="card-title">How to securely store your HD wallet seeds?</h4>
+                                    </a>
+                                    <p class="card-text">Cras chinwag brown bread Eaton cracking goal so I said a load
+                                        of
+                                        old tosh baking cakes.!</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="meta-info">
+                                        <a href="#" class="author"><img src="{% static 'pages/images/avatar/6.jpg' %}"
+                                                alt=""> Admin</a>
+                                        <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="blog-grid">
+                            <div class="card">
+                                <img class="img-fluid" src="{% static 'pages/images/blog/3.jpg' %}" alt="">
+                                <div class="card-body">
+                                    <a href="blog-single.html">
+                                        <h4 class="card-title">Exclusive Interview With Xinxi Wang Of Litecoin</h4>
+                                    </a>
+                                    <p class="card-text">Cras chinwag brown bread Eaton cracking goal so I said a load
+                                        of
+                                        old tosh baking cakes.!</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="meta-info">
+                                        <a href="#" class="author"><img src="{% static 'pages/images/avatar/7.jpg' %}"
+                                                alt=""> Admin</a>
+                                        <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="get-touch section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-title">
+                            <h2>Get in touch. Stay in touch.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="get-touch-content">
+                            <div class="media">
+                                <span><i class="fa fa-shield"></i></span>
+                                <div class="media-body">
+                                    <h4>24 / 7 Support</h4>
+                                    <p>Got a problem? Just get in touch. Our support team is available 24/7.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="get-touch-content">
+                            <div class="media">
+                                <span><i class="fa fa-cubes"></i></span>
+                                <div class="media-body">
+                                    <h4>paycoinmama Blog</h4>
+                                    <p>News and updates from the world’s leading cryptocurrency exchange.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="get-touch-content">
+                            <div class="media">
+                                <span><i class="fa fa-certificate"></i></span>
+                                <div class="media-body">
+                                    <h4>Careers</h4>
+                                    <p>Help build the future of technology. Start your new career at paycoinmama.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="get-touch-content">
+                            <div class="media">
+                                <span><i class="fa fa-life-ring"></i></span>
+                                <div class="media-body">
+                                    <h4>Community</h4>
+                                    <p>paycoinmama is global. Join the discussion in our worldwide communities.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="bottom section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="bottom-logo">
+                            <img class="pb-3" src="{% static 'pages/images/logo-white.png' %}" alt="">
+
+                            <p>paycoinmama is one of the fast growing cryptocurrency exchanging platform working to
+                                bring reliance and commitment to the crypto market</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Company</h4>
+                            <ul>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="career.html">Career</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                                <li><a href="team.html">Our Partner</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Support</h4>
+                            <ul>
+                                <li><a href="contact.html">Ticket</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="helpdesk.html">Helpdesk</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Exchange Pair</h4>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                    <ul>
+                                        <li><a href="#">ETH to BTC</a></li>
+                                        <li><a href="#">BTC to ETH</a></li>
+                                        <li><a href="#">LTC to ETH</a></li>
+                                        <li><a href="#">USDT to BTC</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                    <ul>
+                                        <li><a href="#">BTC to USDT</a></li>
+                                        <li><a href="#">LTC to BTC</a></li>
+                                        <li><a href="#">XMR to BTC</a></li>
+                                        <li><a href="#">ETC to DASH</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="copyright">
+                            <p>© Copyright 2020 <a href="#">paycoinmama</a> I All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function () {
+                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/6129597f649e0a0a5cd35011/1fe4ob7bk';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+
+
+    </div>
+
+
+
+
+    <script src="{% static 'pages/js/global.js' %}"></script>
+    <script src="{% static 'pages/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'pages/vendor/owl-carousel/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'pages/js/plugins/owl-carousel-init.js' %}"></script>
+
+    <script src="{% static 'pages/vendor/apexchart/apexcharts.min.js' %}"></script>
+    <script src="{% static 'pages/vendor/apexchart/apexchart-init.js' %}"></script>
+
+    <script src="{% static 'pages/js/scripts.js' %}"></script>
+</body>
+
+<!-- Mirrored from paycoinmama.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Aug 2021 15:00:58 GMT -->
+
+</html>

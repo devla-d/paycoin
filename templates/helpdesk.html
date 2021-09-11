@@ -1,0 +1,349 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Mirrored from paycoinmama.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Aug 2021 14:59:35 GMT -->
+        <!-- Added by HTTrack -->
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> Helpdesk --- paycoinmama, Smart way of buying Digital Assets </title>
+        <!-- Favicon icon -->
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'pages/images/favicon.png' %}">
+        <link rel="stylesheet" href="{% static 'pages/vendor/nice-select/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'pages/vendor/owl-carousel/css/owl.theme.default.css' %}">
+        <link rel="stylesheet" href="{% static 'pages/vendor/owl-carousel/css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'pages/vendor/waves/waves.min.css' %}">
+        <link rel="stylesheet" href="{% static 'pages/vendor/waves/waves.min.css' %}">
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'pages/vendor/toastr/toastr.min.css' %}">
+        <script src="{% static 'pages/js/jquery.min.js' %}"></script>
+    </head>
+
+<body>
+
+      <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="navigation">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <a class="navbar-brand" href="/"><img src="{% static 'pages/images/logo.png' %}"
+                                        alt=""></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link" href="/" data-toggle="dropdown">Home
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/price">Price</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/wallet">Wallet</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Company
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="/about">About us</a>
+                                                <a class="dropdown-item" href="/team">Team</a>
+                                                <a class="dropdown-item" href="/career">Career</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Support
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="/contact">Contact us</a>
+                                                <a class="dropdown-item" href="/helpdesk">Help Desk</a>
+                                                <a class="dropdown-item" href="/faq">FAQ</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/register">Signup</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="signin-btn">
+                                    <a class="btn btn-primary" href="/login">Sign in</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="helpdesk-search section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7">
+                        <div class="helpdesk-search-content">
+                            <p class="mb-1">paycoinmama knowledge Base</p>
+                            <h2 class="mb-5">How can we help you today?</h2>
+                            <div class="helpdesk-form">
+                                <form action="#">
+                                    <input type="text" class="form-control" placeholder="Search here">
+                                    <button type="submit" class="btn btn-success">
+                                        Search
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="help-category section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="help-cat">
+                            <span class="la la-video-camera"></span>
+                            <h4>Video Guide</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="help-cat">
+                            <span class="la la-support"></span>
+                            <h4>FAQ</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="help-cat">
+                            <span class="la la-book"></span>
+                            <h4>API for developers</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <a href="#" class="sub-cat">
+                            <h5> Troubleshooting </h5>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#" class="sub-cat">
+                            <h5> Partnership </h5>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#" class="sub-cat">
+                            <h5> Getting started </h5>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#" class="sub-cat">
+                            <h5> Wallets </h5>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#" class="sub-cat">
+                            <h5> Healthy Tips </h5>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#" class="sub-cat">
+                            <h5> Crypto-definitions </h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="troubleshooting section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="section-title text-center">
+                            <h2>Troubleshooting</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="troubleshooting-content">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4">
+                                    <h4>My Transaction</h4>
+                                    <ul>
+                                        <li><a href="#">My transaction is stuck</a></li>
+                                        <li><a href="#">The amount is too low</a></li>
+                                        <li><a href="#">Sorry, payment was not received</a></li>
+                                        <li><a href="#">Still didn't get my refund</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4">
+                                    <h4>My Wallet</h4>
+                                    <ul>
+                                        <li><a href="#">My wallet address is recognized as invalid</a></li>
+                                        <li><a href="#">What does ‘Not yet redeemed?’ mean</a></li>
+                                        <li><a href="#">I sent my ABC coins to a non-ABC wallet</a></li>
+                                        <li><a href="#">ETH contract addresses</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4">
+                                    <h4>Other</h4>
+                                    <ul>
+                                        <li><a href="#">Customer service doesn't reply</a></li>
+                                        <li><a href="#">The amount is too low</a></li>
+                                        <li><a href="#">Can't log in</a></li>
+                                        <li><a href="#">Can’t enable / disable 2-FA</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ticket-box section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="ticket-box-content">
+                            <h3>Can't find what you're looking for?</h3>
+                            <p>Let us help you!</p>
+                            <a href="/contact" class="btn btn-success">Submit Ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+         <div class="bottom section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="bottom-logo">
+                            <img class="pb-3" src="{% static '/pages/images/logo-white.png' %}" alt="">
+
+                            <p>paycoinmama is one of the fast growing cryptocurrency exchanging platform working to bring reliance and commitment to the crypto market</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Company</h4>
+                            <ul>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/career">Career</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                                <li><a href="/team">Our Partner</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Support</h4>
+                            <ul>
+                                <li><a href="/contact">Ticket</a></li>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="/helpdesk">Helpdesk</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Exchange Pair</h4>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                    <ul>
+                                        <li><a href="#">ETH to BTC</a></li>
+                                        <li><a href="#">BTC to ETH</a></li>
+                                        <li><a href="#">LTC to ETH</a></li>
+                                        <li><a href="#">USDT to BTC</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                    <ul>
+                                        <li><a href="#">BTC to USDT</a></li>
+                                        <li><a href="#">LTC to BTC</a></li>
+                                        <li><a href="#">XMR to BTC</a></li>
+                                        <li><a href="#">ETC to DASH</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="copyright">
+                            <p>© Copyright 2020 <a href="#">paycoinmama</a> I All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6129597f649e0a0a5cd35011/1fe4ob7bk';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script--> 
+    </div>
+
+    <script src="{% static 'pages/js/global.js' %}"></script>
+    <script src="{% static 'pages/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'pages/vendor/owl-carousel/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'pages/js/plugins/owl-carousel-init.js' %}"></script>
+
+    <script src="{% static 'pages/vendor/apexchart/apexcharts.min.js' %}"></script>
+    <script src="{% static 'pages/vendor/apexchart/apexchart-init.js' %}"></script>
+
+    <script src="{% static 'pages/js/scripts.js' %}"></script>
+</body>
+
+<!-- Mirrored from paycoinmama.com/helpdesk by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Aug 2021 15:01:26 GMT -->
+</html>

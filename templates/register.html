@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{%  load static %}
+{% load crispy_forms_tags %}
+{% block title %} Create Your Account  | paycoinmama {% endblock title %}
+{% block links %}
+  <!--links-->
+  {% include "includes/link2.html" %}
+<!--links end-->
+{% endblock links %}
+
+{% block content %}
+<div id="ajax-loader" style="display: none;">
+    <div class="sk-three-bounce">
+      <div class="sk-child sk-bounce1"></div>
+      <div class="sk-child sk-bounce2"></div>
+      <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+
+<h1 id="demo"></h1>
+
+<div class="authincation">
+    <div class="container ">
+        <div class="row justify-content-center h-100 align-items-center ">
+            <div class="col-xl-5 col-md-6 ">
+                <div class="mini-logo text-center">
+                    <img src="{% static '/images/logo.png' %}" alt="">
+                </div>
+                <div class="auth-form card ">
+                    <div class="card-header justify-content-center">
+                        <h4 class="card-title">Create a free Account </h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" name="myform" action="/register/" class="signup_validate registerform" >
+                            {% csrf_token %} 
+
+                            {{ form|crispy }}
+                            <div class="text-center mt-4">
+                               <button type="submit" name="signup-btn" class="btn btn-success btn-block">Sign up</button>
+                            </div>
+                        </form>
+                        <div class="new-account mt-3">
+                            <p>Already have an account? <a class="text-primary" href="/login">Sign in</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

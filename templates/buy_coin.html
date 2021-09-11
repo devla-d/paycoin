@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %} Buy coin | paycoinmama {% endblock title %}
+{% block links %}
+  <!--links-->
+  {% include "includes/links.html" %}
+<!--links end-->
+{% endblock links %}
+
+{% block content %}
+<!--sidebar-->
+  {% include "includes/sidebar.html" %}
+<!--sidebar end-->
+<div class="content">
+<!--sidebar-->
+  {% include "includes/navbar.html" %}
+<!--sidebar end-->
+<section class="section main-content">
+    <div class="content-tilte">
+      <div class="page-title dashboard">
+         <div class="crum">
+             <span><p style=" color: #0366fc;">PaycoinMaMa</p></span>&nbsp; / &nbsp; <span><p style="color: gray;">Buy Coin</p></span>
+         </div>
+    </div>
+    </div>
+  </section>
+
+ <section class="section sell-coin-section">
+     <div class="container">
+          
+         <div class="sell-coin-form-container">
+             <form action="/buy-coin/" method="post">
+              {% if messages %}
+              <div class="">          
+                <h5 class="notification is-primary">Payment verifield!</h5>
+               </div>
+               {% endif %}
+              {% csrf_token %}
+                 <div class="form-g">
+                     <div class="">
+                         <!--div class="columns">
+                             <div class="column is-6 ">
+                                 <div class="field">
+                                    <label class="label">Coin</label>
+                                    <div class="control  has-icons-left">
+                                        <span class="select is-medium">
+                                          <select style="background: #F2F6FE;">
+                                              <option data-display="Select Coin" value="">Select Coin
+                                              </option>
+                                              <option value="Bitcoin">BTC</option>
+                                               
+                                              <option value="Etheruem">ETH</option>
+                                              <option value="ripple">XRP</option>
+                                              <option value="dogecoin">DOGE</option>
+                                          </select>
+                                        </span>
+                                        <span class="icon is-small is-left">
+                                          <i class="fas fa-coins" style=" color: #1652F0;"></i>
+                                        </span>
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="column is-6">
+                                 <div class="field">
+                                    <label class="label">Payment method</label>
+                                    <div class="control has-icons-left"> 
+                                        <span class="select is-medium">
+                                          <select style="background: #F2F6FE;">
+                                            <option data-display="Select Payment Method" value=""> Select
+                                            </option>
+                                            <option value="western">Bank Transfer</option>
+                                            <option value="paypal">Paypal</option>
+                                             <option value="payooner">Payooner</option>
+                                             <option value="cashapp">Cashapp</option>
+                                             <option value="netteller">Netteller</option>
+                                          </select>
+                                        </span> 
+                                         <span class="icon is-small is-left">
+                                            <i class="fas fa-money-check" style=" color: #1652F0;"></i>
+                                          </span>
+                                    </div>
+                                 </div>
+                             </div-->
+                         </div>
+                         <div class="field">
+                          <label class="label">Coin</label>
+                          <div class="control  has-icons-left">
+                              <span class="select is-medium">
+                                <select name="coin" style="background: #F2F6FE;" required="required">
+                                    <option data-display="Select Coin" value="">Select Coin
+                                    </option>
+                                    <option value="BTC">BTC</option>
+                                     
+                                    <option value="ETH">ETH</option>
+                                    <option value="XRP">XRP</option>
+                                    <option value="DOGE">DOGE</option>
+                                </select>
+                              </span>
+                              <span class="icon is-small is-left">
+                                <i class="fas fa-coins" style=" color: #1652F0;"></i>
+                              </span>
+                          </div>
+                          </div>
+                          <div class="field">
+                            <label class="label">Amount in Usd</label>
+                            <div class="control has-icons-left has-icons-right">
+                              <input class="input is-medium " name="amount" type="text" placeholder="amount" >
+                              <span class="icon is-small is-left">
+                                <i class="fas fa-money-bill" style=" color: #1652F0;"></i>
+                              </span>
+                            </div>
+                             
+                          </div>
+                          <div class="field mt-6">
+                            <div class="control">
+                                <button type="submit" class="button  is-fullwidth  is-primary">Buy Now</button>
+                            </div>
+                        </div>
+                        <p class="p-4">With this page you can buy Coin.  enter your amount and we will calculate what you will receive. Your Bitcoins will be in your account in  1 hour time</p>
+                         
+                      </div>
+                 </div>
+             </form>
+         </div>
+     </div>
+ </section>
+
+
+<div class="mt-5">
+    <!--footer-->
+       {% include "includes/footer.html" %}
+    <!--footer end-->
+</div>
+ 
+ 
+
+{% endblock content %}
